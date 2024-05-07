@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "点击获取当前的时间",
+    "version": "1.0",
+    "description": "这个插件可用于获取当前的年月日时分秒",
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.png",
+            "32": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "icons": {
+        "16": "logo.png",
+        "32": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "inject.js"
+            ]
+        }
+    ]
+}
